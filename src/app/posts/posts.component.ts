@@ -12,15 +12,15 @@ export class PostsComponent {
   public posts = signal([
     {
       title: 'Kurt',
-      description: '1.'
+      description: 'secret'
     },
     {
       title: 'Xierick',
-      description: '2.'
+      description: 'secret'
     },
     {
       title: 'Bautista',
-      description: '3.'
+      description: 'secret'
     }
   ])
 
