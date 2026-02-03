@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,22 +9,22 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent {
-  posts = [
+  public posts = signal([
     {
-      title: 'Angular Basics',
-      description: 'Learn the fundamentals of Angular components and templates.'
+      title: 'Doniel',
+      description: '1.'
     },
     {
-      title: 'Routing in Angular',
-      description: 'Understand how navigation works in Angular.'
+      title: 'Eunson',
+      description: '2.'
     },
     {
-      title: 'Component Styling',
-      description: 'Style components using scoped SCSS.'
+      title: 'Ko',
+      description: '3.'
     }
-  ];
+  ])
 
   deletePost(index: number) {
-    this.posts.splice(index, 1);
+    this.posts().splice(index, 1);
   }
 }
